@@ -47,9 +47,10 @@ function StopWatch() {
     const now = new Date();
     const hour24 = now.getHours();
     const currentMinute = now.getMinutes();
+    const minutesTime = currentMinute < 10 ? `0${currentMinute}` : currentMinute;
     const hour12 = hour24 % 12 || 12;
     const amOrPm = hour24 < 12 ? '오전' : '오후';
-    const timeLog = { time, current: `${amOrPm} ${hour12}:${currentMinute}` };
+    const timeLog = { time, current: `${amOrPm} ${hour12}:${minutesTime}` };
 
     setTimeLog((prev) => [...prev, timeLog]);
     setIsRunning(false);
@@ -82,16 +83,16 @@ function StopWatch() {
         <MainTime>{getPrettyTime(time)}</MainTime>
         <ButtonContainer>
           {!isRunning && (
-            <Button onClick={start} startIcon={<PlayArrow />} variant="contained">
+            <Button onClick={start} startIcon={<PlayArrow />} variant="outlined" color="secondary">
               시작
             </Button>
           )}
           {isRunning && (
-            <Button onClick={stop} startIcon={<Stop />} variant="outlined">
+            <Button onClick={stop} startIcon={<Stop />} variant="contained" color="secondary">
               기록
             </Button>
           )}
-          <Button onClick={reset} startIcon={<Delete />} variant="outlined">
+          <Button onClick={reset} startIcon={<Delete />} variant="outlined" color="secondary">
             리셋
           </Button>
         </ButtonContainer>
