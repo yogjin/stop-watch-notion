@@ -32,10 +32,17 @@ function StopWatch() {
   function start() {
     if (!isRunning) {
       intervalRef.current = setInterval(() => {
-        setTime((time) => ({
-          ...time,
-          seconds: time.seconds + 1,
-        }));
+        setTime((time) => {
+          const { seconds, minutes, hours } = time;
+
+          if (seconds < 59) {
+            return { ...time, seconds: seconds + 1 };
+          } else if (minutes < 59) {
+            return { ...time, seconds: 0, minutes: minutes + 1 };
+          } else {
+            return { seconds: 0, minutes: 0, hours: hours + 1 };
+          }
+        });
       }, 1000);
       setIsRunning(true);
     }
