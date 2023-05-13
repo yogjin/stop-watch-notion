@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/stop-watch-notion/static/css/main.abd64e84.css",
-    "main.js": "/stop-watch-notion/static/js/main.44593739.js",
+    "main.js": "/stop-watch-notion/static/js/main.efa73b4c.js",
     "index.html": "/stop-watch-notion/index.html",
     "main.abd64e84.css.map": "/stop-watch-notion/static/css/main.abd64e84.css.map",
-    "main.44593739.js.map": "/stop-watch-notion/static/js/main.44593739.js.map"
+    "main.efa73b4c.js.map": "/stop-watch-notion/static/js/main.efa73b4c.js.map"
   },
   "entrypoints": [
     "static/css/main.abd64e84.css",
-    "static/js/main.44593739.js"
+    "static/js/main.efa73b4c.js"
   ]
 }
