@@ -134,7 +134,10 @@ const MainTimeContainer = styled.div`
   margin-top: 20px;
 `;
 
-const ButtonContainer = styled.div``;
+const ButtonContainer = styled.div`
+  display: flex;
+  gap: 4px;
+`;
 
 const TimeLogList = styled.ul`
   display: flex;
